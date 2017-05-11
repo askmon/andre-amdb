@@ -1,0 +1,148 @@
+{
+	"variables": [],
+	"info": {
+		"name": "amdb",
+		"_postman_id": "2a888023-a4f2-88a0-e41b-e9ec986bb79e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movie",
+			"description": "",
+			"item": [
+				{
+					"name": "Query",
+					"request": {
+						"url": "{{url}}/search/movie?query=roger&page=1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{JWT_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\"adult\":false,\n\"backdrop_path\":\"/AplR1QRswlXiM65GoifX8sDadME.jpg\",\n\"belongs_to_collection\":null,\n\"budget\":4000000,\n\"homepage\":\"\",\n\"id\":213,\n\"imdb_id\":\"tt0053125\",\n\"original_language\":\"en\",\n\"original_title\":\"North by Northwest\",\n\"overview\":\"Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.\",\n\"popularity\":2.394984,\n\"poster_path\":\"/aNV789h3oHm2pTHK5Bdq5RuiumZ.jpg\",\n\"release_date\":\"1959-07-08\",\n\"revenue\":13275000,\n\"runtime\":136,\n\"status\":\"Released\",\n\"tagline\":\"It's a deadly game of 'tag' and Cary Grant is 'it'...\",\n\"title\":\"North by Northwest\",\n\"video\":false,\n\"vote_average\":7.8,\n\"vote_count\":853\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Movie",
+					"request": {
+						"url": "{{url}}/movie/550",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{JWT_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\"adult\":false,\n\"backdrop_path\":\"/AplR1QRswlXiM65GoifX8sDadME.jpg\",\n\"belongs_to_collection\":null,\n\"budget\":4000000,\n\"homepage\":\"\",\n\"id\":213,\n\"imdb_id\":\"tt0053125\",\n\"original_language\":\"en\",\n\"original_title\":\"North by Northwest\",\n\"overview\":\"Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.\",\n\"popularity\":2.394984,\n\"poster_path\":\"/aNV789h3oHm2pTHK5Bdq5RuiumZ.jpg\",\n\"release_date\":\"1959-07-08\",\n\"revenue\":13275000,\n\"runtime\":136,\n\"status\":\"Released\",\n\"tagline\":\"It's a deadly game of 'tag' and Cary Grant is 'it'...\",\n\"title\":\"North by Northwest\",\n\"video\":false,\n\"vote_average\":7.8,\n\"vote_count\":853\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Popular Movies",
+					"request": {
+						"url": "{{url}}/movie/popular?page=1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{JWT_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\n\"adult\":false,\n\"backdrop_path\":\"/AplR1QRswlXiM65GoifX8sDadME.jpg\",\n\"belongs_to_collection\":null,\n\"budget\":4000000,\n\"homepage\":\"\",\n\"id\":213,\n\"imdb_id\":\"tt0053125\",\n\"original_language\":\"en\",\n\"original_title\":\"North by Northwest\",\n\"overview\":\"Advertising man Roger Thornhill is mistaken for a spy, triggering a deadly cross-country chase.\",\n\"popularity\":2.394984,\n\"poster_path\":\"/aNV789h3oHm2pTHK5Bdq5RuiumZ.jpg\",\n\"release_date\":\"1959-07-08\",\n\"revenue\":13275000,\n\"runtime\":136,\n\"status\":\"Released\",\n\"tagline\":\"It's a deadly game of 'tag' and Cary Grant is 'it'...\",\n\"title\":\"North by Northwest\",\n\"video\":false,\n\"vote_average\":7.8,\n\"vote_count\":853\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Create Movie",
+					"request": {
+						"url": "andre-amdb.herokuapp.com/movie",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "{{JWT_TOKEN}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"adult\":false,\"backdrop_path\":\"/cYWI1lnHEvoVKDdlrRt2b5et3Bj.jpg\",\"belongs_to_collection\":{\"id\":10522,\"name\":\"Starship Troopers Collection\",\"poster_path\":\"/uumu3Xj1ME1632SCsyVJwITgOKZ.jpg\",\"backdrop_path\":\"/hwZXCuY6GVw50o17nDGbSR8WMFJ.jpg\"},\"budget\":105000000,\"genres\":[{\"id\":12,\"name\":\"Adventure\"},{\"id\":28,\"name\":\"Action\"},{\"id\":53,\"name\":\"Thriller\"},{\"id\":878,\"name\":\"Science Fiction\"}],\"homepage\":\"\",\"id\":563,\"imdb_id\":\"tt0120201\",\"original_language\":\"en\",\"original_title\":\"Starship Troopers\",\"overview\":\"Set in the future, the story follows a young soldier named Johnny Rico and his exploits in the Mobile Infantry. Rico's military career progresses from recruit to non-commissioned officer and finally to officer against the backdrop of an interstellar war between mankind and an arachnoid species known as \\\"the Bugs\\\".\",\"popularity\":2.192112,\"poster_path\":\"/zeCD9WkhABFJmPq3SlTozXJGEtr.jpg\",\"production_companies\":[{\"name\":\"TriStar Pictures\",\"id\":559},{\"name\":\"Touchstone Pictures\",\"id\":9195},{\"name\":\"Big Bug Pictures\",\"id\":23434}],\"production_countries\":[{\"iso_3166_1\":\"US\",\"name\":\"United States of America\"}],\"release_date\":\"1997-11-06\",\"revenue\":121214377,\"runtime\":129,\"spoken_languages\":[{\"iso_639_1\":\"en\",\"name\":\"English\"}],\"status\":\"Released\",\"tagline\":\"The only good bug is a dead bug.\",\"title\":\"Starship Troopers\",\"video\":false,\"vote_average\":6.7,\"vote_count\":1303}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"description": "",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"url": "{{url}}/user/create",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"test\",\n\t\"password\":\"test\",\n\t\"email\":\"test@test.com\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate User",
+					"request": {
+						"url": "{{url}}/user/authenticate",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\":\"test\",\n\t\"password\":\"test\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
