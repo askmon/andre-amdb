@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "fillit"
+    "url": "https://github.com/askmon/andre-amdb"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "fillit"
+    "url": "https://github.com/askmon/andre-amdb/issues"
   },
-  "homepage": "fillit",
+  "homepage": "https://github.com/askmon/andre-amdb",
   "dependencies": {
     "body-parser": "1.15.2",
     "class-transformer": "0.1.6",
